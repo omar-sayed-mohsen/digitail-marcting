@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    margin: auto;
+}
+.justify-end{
+    justify-content: end;
+}
+.d-flex{
+    display: flex;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.space-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+/* .align-end{
+    align-content: end;
+} */
+.text-center{
+    text-align: center;
+}
+.text-start{
+    text-align: left;
+}
+.text-end{
+    text-align: right;
+}
+/* ------------------------------------------------------------------------- */
+p{
+    color: gray;
+    font-size: 18px;
+}
+.w-50{
+    width: 48%;
+}
+.w-25{
+    width: 23%;
+}
+.my-10{
+    margin: 10px 0;
+}
+.w-100{
+    width: 98%;
+}
+.m-0{
+    margin: 0;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    font-weight: 500;
+}
+.btn-primary{
+    background-color: #FBA504;
+    border-color: #FBA504;
+    color: black;
+}
+.btn:hover{
+    box-shadow: 0px 0px 50px 4px rgb(170, 170, 170);
+}
+.my-20{
+    margin: 20px 0;
+}
+div img{
+    width: 100%;
+} 
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.active{
+    color: #FBA504;
+}
+.title{
+    color: #FBA504 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.second-title{
+    font-size: 40px;
+}
+/* ------------------------------------------------------------------------------- */
+/* nav */
+nav{
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+nav .menu li{
+    list-style: none;
+    padding: 5px;
+    margin: 7px 5px 0 5px;
+}
+nav .menu li a{
+    text-transform: capitalize;
+    transition: color 0.3s;
+}
+nav .menu li a:hover{
+    color: #FBA504;
+}
+.logo{
+    color: #6222CC;
+    font-size: 40px;
+}
+/* main */
+main .d-flex{
+    height: 90vh;
+    padding-top: 70px;
+}
+.background{
+    background-color: #6222CC !important;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../img/wave\ \(1\).svg);
+}
+main p,
+main h2{
+    color: white;
+}
+main h2{
+    margin: 20px 0;
+    font-size: 34px;
+}
+/* section-1 */
+.card{
+    border-radius: 10px;
+    background-color: #F6F4F9;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.5s;
+    cursor: default;
+    width: 30%;
+}
+.card:hover{
+    transform: translateY(-20px);
+}
+.text-primary {
+    color: #6222CC;
+}
+.fa-3x {
+    font-size: 48px;
+}
+/* section-2 */
+.parent{
+    background-color: #e9ecef;
+    height: 3px;
+    width: 100%;
+}
+.child{
+    width: 85%;
+    background-color: #6222CC !important;
+    height: 3px;
+}
+.child-2{
+    width: 90%;
+    background-color: #FBA504 !important;
+    height: 3px;
+}
+.child-3{
+    background-color: black !important;
+    height: 3px;
+    width: 95%;
+}
+/* combining */
+section,
+footer{
+    padding: 100px 0;
+}
+/* responseve */
+@media screen and (min-width: 1024px) {
+    .container{
+        width: 70%;
+        margin: auto;
+    }
+    nav .menu{
+        display: inline-flex;
+    }
+    .fa-bars{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .row,
+    .d-flex:not(nav .d-flex) {
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .w-50{
+        width: 100%;
+    }
+    nav .menu{
+        display: none;
+    }
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+    .fa-bars{
+        display: inline-flex;
+    }
+    .card,
+    .w-50,
+    .space-between:not(nav .space-between){
+        text-align: center;
+    }
+    .w-50,
+    .card{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .row,
+    .d-flex:not(nav .d-flex) {
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .card,
+    .w-50,
+    .space-between:not(nav .space-between){
+        text-align: center;
+    }
+    .w-50,
+    .card{
+        width: 100%;
+    }
+    nav .menu{
+        display: none;
+    }
+    .container{
+        width: 95%;
+        margin: auto;
+    }
+    .fa-bars{
+        display: inline-flex;
+    }
+}
